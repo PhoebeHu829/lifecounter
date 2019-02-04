@@ -1,0 +1,529 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--History-->
+        <scene sceneID="1jH-tU-8me">
+            <objects>
+                <viewController storyboardIdentifier="History" useStoryboardIdentifierAsRestorationIdentifier="YES" id="apH-dh-NjX" customClass="History" customModule="lifecounter2" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="q9O-Kz-iJr">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BMC-NX-BPt">
+                                <rect key="frame" x="20" y="40" width="34" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="7PR-Ld-H0H"/>
+                                    <constraint firstAttribute="width" constant="34" id="AOp-DN-KCT"/>
+                                </constraints>
+                                <state key="normal" title="Back"/>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="qaT-MZ-u66"/>
+                                </connections>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="n8b-K7-54v">
+                                <rect key="frame" x="5" y="78" width="365" height="569"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="502" id="UPp-C1-jPK"/>
+                                    <constraint firstAttribute="width" constant="365" id="jcp-SB-VhF"/>
+                                </constraints>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="n8b-K7-54v" firstAttribute="top" secondItem="BMC-NX-BPt" secondAttribute="bottom" constant="45" id="76W-Ea-xcV"/>
+                            <constraint firstItem="n8b-K7-54v" firstAttribute="leading" secondItem="xPT-Pg-ShF" secondAttribute="leading" constant="5" id="S3i-1F-sRQ"/>
+                            <constraint firstItem="BMC-NX-BPt" firstAttribute="top" secondItem="xPT-Pg-ShF" secondAttribute="top" constant="20" id="WsO-tf-PHU"/>
+                            <constraint firstItem="BMC-NX-BPt" firstAttribute="leading" secondItem="xPT-Pg-ShF" secondAttribute="leading" constant="20" id="rpQ-YE-m6Q"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="xPT-Pg-ShF"/>
+                    </view>
+                    <connections>
+                        <outlet property="historyTableView" destination="n8b-K7-54v" id="WKx-Bp-6cY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7Cb-6I-yne" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1213.5999999999999" y="-117.39130434782609"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="lifecounter2" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7q9-sj-zGC">
+                                <rect key="frame" x="0.0" y="65" width="360" height="50"/>
+                                <subviews>
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="99f-3c-HhF">
+                                        <rect key="frame" x="112" y="19" width="41" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="+1"/>
+                                        <connections>
+                                            <action selector="playGame:" destination="BYZ-38-t0r" eventType="touchUpInside" id="txw-ZV-STd"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="55l-7y-h9P">
+                                        <rect key="frame" x="176" y="20" width="30" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="-1"/>
+                                        <connections>
+                                            <action selector="playGame:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8DA-Ry-Vkf"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Player1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uR9-pS-VNG">
+                                        <rect key="frame" x="18" y="24" width="55" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" tag="3" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kDL-pX-PGo">
+                                        <rect key="frame" x="237" y="19" width="30" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="+5"/>
+                                        <connections>
+                                            <action selector="playGame:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7pL-7T-Xtc"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="4" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4HB-KV-EO1">
+                                        <rect key="frame" x="313" y="21" width="30" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="-5"/>
+                                        <connections>
+                                            <action selector="playGame:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vkX-iJ-h7T"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="0U6-It-EyF"/>
+                                    <constraint firstAttribute="width" constant="360" id="9IG-IV-ahP"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iWk-uw-7zx">
+                                <rect key="frame" x="0.0" y="140" width="360" height="50"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Player2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="87v-vb-teW">
+                                        <rect key="frame" x="20" y="10" width="57" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" tag="12" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b8n-1G-HO1">
+                                        <rect key="frame" x="175" y="3" width="30" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="-1"/>
+                                        <connections>
+                                            <action selector="playGame:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hSX-AS-vJ9"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="11" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z6M-CH-gaj">
+                                        <rect key="frame" x="107" y="6" width="41" height="25"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="+1"/>
+                                        <connections>
+                                            <action selector="playGame:" destination="BYZ-38-t0r" eventType="touchUpInside" id="76i-Op-ipZ"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="13" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PS3-8f-raj">
+                                        <rect key="frame" x="234" y="8" width="30" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="+5"/>
+                                        <connections>
+                                            <action selector="playGame:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jZ6-a3-G5L"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dHx-bS-DQB">
+                                        <rect key="frame" x="311" y="6" width="30" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="-5"/>
+                                        <connections>
+                                            <action selector="playGame:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hBj-iX-Enn"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="8dN-ec-rTh"/>
+                                    <constraint firstAttribute="width" constant="360" id="YgS-4p-ESw"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="73t-Bp-ojl">
+                                <rect key="frame" x="0.0" y="195" width="360" height="50"/>
+                                <subviews>
+                                    <button opaque="NO" tag="21" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bin-pT-1cK">
+                                        <rect key="frame" x="111" y="-1" width="41" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="+1"/>
+                                        <connections>
+                                            <action selector="playGame:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5dN-wJ-3Jn"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Player3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DC2-4B-IXy">
+                                        <rect key="frame" x="17" y="8" width="58" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" tag="22" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PKK-SS-ZOx">
+                                        <rect key="frame" x="177" y="0.0" width="30" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="-1"/>
+                                        <connections>
+                                            <action selector="playGame:" destination="BYZ-38-t0r" eventType="touchUpInside" id="azo-7Z-Jmt"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="23" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yDM-FA-VjM">
+                                        <rect key="frame" x="239" y="3" width="30" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="+5"/>
+                                        <connections>
+                                            <action selector="playGame:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vCK-fI-tVR"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="24" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xvJ-b3-BVs">
+                                        <rect key="frame" x="308" y="3" width="30" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="-5"/>
+                                        <connections>
+                                            <action selector="playGame:" destination="BYZ-38-t0r" eventType="touchUpInside" id="U8o-vm-CbQ"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="360" id="9kI-hV-Lha"/>
+                                    <constraint firstAttribute="height" constant="50" id="KCw-ht-NkK"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="X6N-1c-2jg">
+                                <rect key="frame" x="0.0" y="250" width="360" height="50"/>
+                                <subviews>
+                                    <button opaque="NO" tag="31" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cyJ-NT-hFW">
+                                        <rect key="frame" x="106" y="7" width="41" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="+1"/>
+                                        <connections>
+                                            <action selector="playGame:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fVb-ud-MO1"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Player4" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7OQ-RA-qdt">
+                                        <rect key="frame" x="14" y="12" width="58" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" tag="32" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jqq-fK-X2C">
+                                        <rect key="frame" x="182" y="7" width="30" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="-1"/>
+                                        <connections>
+                                            <action selector="playGame:" destination="BYZ-38-t0r" eventType="touchUpInside" id="k9Q-MT-OVR"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="33" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LVI-sN-Qbe">
+                                        <rect key="frame" x="241" y="7" width="30" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="+5"/>
+                                        <connections>
+                                            <action selector="playGame:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ndw-m0-8pX"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="34" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tju-Dz-ZDP">
+                                        <rect key="frame" x="308" y="10" width="30" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="-5"/>
+                                        <connections>
+                                            <action selector="playGame:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6aq-ar-C7D"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="360" id="YWf-Nc-EUl"/>
+                                    <constraint firstAttribute="height" constant="50" id="fES-wa-i0j"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Z8I-2P-8ZM" userLabel="View5">
+                                <rect key="frame" x="0.0" y="297" width="360" height="50"/>
+                                <subviews>
+                                    <button opaque="NO" tag="41" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zzs-2M-Rf7">
+                                        <rect key="frame" x="106" y="7" width="41" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="+1"/>
+                                        <connections>
+                                            <action selector="playGame:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GRO-4M-xj6"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Player5" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G5M-Zm-jzR">
+                                        <rect key="frame" x="14" y="12" width="58" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" tag="42" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JQE-Uo-Ku5">
+                                        <rect key="frame" x="181" y="7" width="30" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="-1"/>
+                                        <connections>
+                                            <action selector="playGame:" destination="BYZ-38-t0r" eventType="touchUpInside" id="a8g-9l-ZkQ"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="43" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iUl-Cy-T9v">
+                                        <rect key="frame" x="242" y="10" width="30" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="+5"/>
+                                        <connections>
+                                            <action selector="playGame:" destination="BYZ-38-t0r" eventType="touchUpInside" id="SxQ-n5-n8h"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="44" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1RP-MY-il0">
+                                        <rect key="frame" x="312" y="12" width="30" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="-5"/>
+                                        <connections>
+                                            <action selector="playGame:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sPX-IG-DhX"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="jdP-h1-3rZ"/>
+                                    <constraint firstAttribute="width" constant="360" id="nEd-jF-hIA"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8c5-z2-F9u" userLabel="View7">
+                                <rect key="frame" x="0.0" y="412" width="360" height="50"/>
+                                <subviews>
+                                    <button opaque="NO" tag="61" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0uo-1Q-gaf">
+                                        <rect key="frame" x="106" y="7" width="41" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="+1"/>
+                                        <connections>
+                                            <action selector="playGame:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DC6-Ax-IyP"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Player7" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fsm-Oh-KVS">
+                                        <rect key="frame" x="14" y="12" width="57" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" tag="62" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6LA-bd-Xyw">
+                                        <rect key="frame" x="182" y="7" width="30" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="-1"/>
+                                        <connections>
+                                            <action selector="playGame:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mqE-pW-UOB"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="63" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eSQ-XI-1Dz">
+                                        <rect key="frame" x="246" y="10" width="30" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="+5"/>
+                                        <connections>
+                                            <action selector="playGame:" destination="BYZ-38-t0r" eventType="touchUpInside" id="81k-s0-WU8"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="64" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XjT-oN-NiK">
+                                        <rect key="frame" x="310" y="11" width="30" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="-5"/>
+                                        <connections>
+                                            <action selector="playGame:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9KC-3V-BLZ"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="360" id="HLQ-hE-GAp"/>
+                                    <constraint firstAttribute="height" constant="50" id="dDK-uD-85L"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ESc-71-oTh" userLabel="View8">
+                                <rect key="frame" x="0.0" y="494" width="360" height="50"/>
+                                <subviews>
+                                    <button opaque="NO" tag="71" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QdU-LU-kog">
+                                        <rect key="frame" x="106" y="7" width="41" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="+1"/>
+                                        <connections>
+                                            <action selector="playGame:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Mil-6F-SZt"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Player8" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JEX-sH-a9O">
+                                        <rect key="frame" x="8" y="8" width="58" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" tag="72" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IAr-Zh-zdt">
+                                        <rect key="frame" x="182" y="7" width="30" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="-1"/>
+                                        <connections>
+                                            <action selector="playGame:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KQr-0w-w4R"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="73" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XnA-Ks-RhC">
+                                        <rect key="frame" x="249" y="7" width="30" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="+5"/>
+                                        <connections>
+                                            <action selector="playGame:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Gbg-s2-gX8"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="74" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YVy-Ux-cyE">
+                                        <rect key="frame" x="309" y="7" width="30" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="-5"/>
+                                        <connections>
+                                            <action selector="playGame:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QYm-mn-KkQ"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="360" id="TtY-VV-lYw"/>
+                                    <constraint firstAttribute="height" constant="50" id="uU9-jS-ZFh"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UPV-eO-zPG">
+                                <rect key="frame" x="16" y="27" width="111" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="111" id="7rS-gU-r6X"/>
+                                    <constraint firstAttribute="height" constant="30" id="TNh-EF-KpS"/>
+                                </constraints>
+                                <state key="normal" title="Add One Player!"/>
+                                <connections>
+                                    <action selector="addPlayer:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cXc-zA-bXY"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sMo-F5-Jqv" userLabel="View6">
+                                <rect key="frame" x="0.0" y="357" width="360" height="50"/>
+                                <subviews>
+                                    <button opaque="NO" tag="51" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SQa-ck-fmN">
+                                        <rect key="frame" x="106" y="7" width="41" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="+1"/>
+                                        <connections>
+                                            <action selector="playGame:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8t5-ng-9Tz"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Player6" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wR5-hB-LWV">
+                                        <rect key="frame" x="14" y="12" width="58" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" tag="52" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5c5-Do-3tl">
+                                        <rect key="frame" x="178" y="7" width="30" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="-1"/>
+                                        <connections>
+                                            <action selector="playGame:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Nmp-TY-aeD"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="53" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xgh-VD-jsM">
+                                        <rect key="frame" x="246" y="6" width="30" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="+5"/>
+                                        <connections>
+                                            <action selector="playGame:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rtH-vi-7fI"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="54" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bo0-29-3Lz">
+                                        <rect key="frame" x="303" y="8" width="30" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="-5"/>
+                                        <connections>
+                                            <action selector="playGame:" destination="BYZ-38-t0r" eventType="touchUpInside" id="auq-20-gWq"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="24h-jn-EtD"/>
+                                    <constraint firstAttribute="width" constant="360" id="6nW-IM-tRq"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7YQ-7Y-qhf">
+                                <rect key="frame" x="20" y="607" width="90" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="90" id="1QX-HN-gTQ"/>
+                                    <constraint firstAttribute="height" constant="30" id="uDr-nq-kZD"/>
+                                </constraints>
+                                <state key="normal" title="View History"/>
+                                <connections>
+                                    <segue destination="apH-dh-NjX" kind="show" id="fIb-4A-CUP"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="7q9-sj-zGC" firstAttribute="top" secondItem="UPV-eO-zPG" secondAttribute="bottom" constant="8" id="3hK-aN-EDS"/>
+                            <constraint firstItem="7q9-sj-zGC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="6hM-aa-MFM"/>
+                            <constraint firstItem="ESc-71-oTh" firstAttribute="top" secondItem="8c5-z2-F9u" secondAttribute="bottom" constant="32" id="BkK-WN-Uyx"/>
+                            <constraint firstItem="8c5-z2-F9u" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="CqR-vw-KxL"/>
+                            <constraint firstItem="sMo-F5-Jqv" firstAttribute="top" secondItem="Z8I-2P-8ZM" secondAttribute="bottom" constant="10" id="I0s-mn-VHk"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="7YQ-7Y-qhf" secondAttribute="bottom" constant="30" id="KPw-zo-p1n"/>
+                            <constraint firstItem="iWk-uw-7zx" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="LUb-Vz-gDM"/>
+                            <constraint firstItem="ESc-71-oTh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="N2c-TE-e5r"/>
+                            <constraint firstItem="73t-Bp-ojl" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="O3u-k3-vhF"/>
+                            <constraint firstItem="8c5-z2-F9u" firstAttribute="top" secondItem="sMo-F5-Jqv" secondAttribute="bottom" constant="5" id="Rqh-4S-lPS"/>
+                            <constraint firstItem="7q9-sj-zGC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="SBh-Rx-KZn"/>
+                            <constraint firstItem="7q9-sj-zGC" firstAttribute="top" secondItem="UPV-eO-zPG" secondAttribute="bottom" constant="8" id="UoC-6R-xcS"/>
+                            <constraint firstItem="X6N-1c-2jg" firstAttribute="top" secondItem="73t-Bp-ojl" secondAttribute="bottom" constant="5" id="Uw2-uv-w2Z"/>
+                            <constraint firstItem="Z8I-2P-8ZM" firstAttribute="top" secondItem="73t-Bp-ojl" secondAttribute="bottom" constant="52" id="Zqc-9R-pVD"/>
+                            <constraint firstItem="iWk-uw-7zx" firstAttribute="top" secondItem="7q9-sj-zGC" secondAttribute="bottom" constant="25" id="Zxd-GT-dw1"/>
+                            <constraint firstItem="UPV-eO-zPG" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="7" id="b51-6u-b31"/>
+                            <constraint firstItem="7YQ-7Y-qhf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="lLM-ma-coO"/>
+                            <constraint firstItem="Z8I-2P-8ZM" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="oZV-RM-UWs"/>
+                            <constraint firstItem="sMo-F5-Jqv" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="wcx-8I-Rj0"/>
+                            <constraint firstItem="X6N-1c-2jg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="wgT-fN-g50"/>
+                            <constraint firstItem="73t-Bp-ojl" firstAttribute="top" secondItem="iWk-uw-7zx" secondAttribute="bottom" constant="5" id="xsv-Gg-dox"/>
+                            <constraint firstItem="UPV-eO-zPG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="yqB-Tb-eeE"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="addButton" destination="UPV-eO-zPG" id="dG7-Wn-4gw"/>
+                        <outlet property="p1info" destination="uR9-pS-VNG" id="wGi-RB-l8i"/>
+                        <outlet property="p2info" destination="87v-vb-teW" id="vjf-cI-GvQ"/>
+                        <outlet property="p3info" destination="DC2-4B-IXy" id="O7V-ZH-51j"/>
+                        <outlet property="p4info" destination="7OQ-RA-qdt" id="bUt-zz-6O2"/>
+                        <outlet property="p5info" destination="G5M-Zm-jzR" id="Tdz-Rn-hG5"/>
+                        <outlet property="p6info" destination="wR5-hB-LWV" id="zNm-Cz-hFT"/>
+                        <outlet property="p7info" destination="fsm-Oh-KVS" id="irx-wz-ucA"/>
+                        <outlet property="p8info" destination="JEX-sH-a9O" id="et0-cd-tP8"/>
+                        <outlet property="player5" destination="Z8I-2P-8ZM" id="6pr-11-FJI"/>
+                        <outlet property="player6" destination="sMo-F5-Jqv" id="tpr-Ef-ag1"/>
+                        <outlet property="player7" destination="8c5-z2-F9u" id="IfT-ma-iVI"/>
+                        <outlet property="player8" destination="ESc-71-oTh" id="jxo-6o-TLV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="18" y="-154"/>
+        </scene>
+    </scenes>
+</document>
